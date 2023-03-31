@@ -6,10 +6,12 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import Post from './Post';
 import   db   from './firebase';
 import '../css/feed.css'
-import firebase from "../firebase";
+// import firebase from "firebase/app";
+import firebase from "./firebase"
+import Avatar from '@mui/material/Avatar';
 function Feed() {
-  const[input,SetInput] = useState();
-const submitPost=(e)=>{
+  const [input,SetInput] = useState("");
+  const submitPost=(e)=>{
   e.preventDefault();
   db.collection("posts").add({
     name:"Ayushman shaw",
@@ -23,7 +25,7 @@ const submitPost=(e)=>{
     <div className='feed'>
         <div className="feed__input">
         <div className="feed__form">
-          {/* <Avatar src=""/> */}
+             <Avatar src="" />
             <form onSubmit={submitPost}>
                 <input type="text" placeholder='start a post' value={ input} onChange={e=> SetInput(e.target.value)} />
                 <input type="submit" />

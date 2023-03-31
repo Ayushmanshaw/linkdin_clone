@@ -7,7 +7,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-// import {Avatar} from "@mui/icons-material";
+import Avatar from '@mui/material/Avatar';
 function Header() {
   return (
     <div className="header">
@@ -26,7 +26,7 @@ function Header() {
               <Headeroptions Icon={BusinessCenterIcon} title="Jobs"/>
               <Headeroptions Icon={MessageIcon} title="Messaging"/>
               <Headeroptions Icon={NotificationsIcon} title="Notification"/>
-              {/* <Headeroptions avatar={Avatar} title="Ayushman"/> */}
+              {<Headeroptions avatar={Avatar} title="Ayushman shaw"/>}
         </div>
     </div>
   )

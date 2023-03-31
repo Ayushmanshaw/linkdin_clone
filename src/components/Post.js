@@ -1,16 +1,18 @@
 import React from 'react'
+import '../css/post.css'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
-import '../css/post.css'
-function Post({name,description,message}) {
+import Avatar from '@mui/material/Avatar';
+
+function Post({name,description,message,photourl}) {
   return (
     <div className='posts'>
         <div className="post__header">
             <div className="post__headerLeft">
-                {/* <Avatar src={photourl}/> */}
+                <Avatar src={photourl}/>
                 <div className="post_profile_details">
                     <h3>{name}</h3>
                     <p>{description}</p>
